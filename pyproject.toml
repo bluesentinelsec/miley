@@ -1,14 +1,22 @@
 [tool.poetry]
 name = "miley"
 version = "0.1.0"
-description = ""
+description = "TBD"
 authors = ["bluesentinelsec <bluesentinel@protonmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+requests = "^2.31.0"
 
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+packages = [
+    { include = "miley" },
+]
+
+[tool.poetry.scripts]
+miley = "miley.main:main"
