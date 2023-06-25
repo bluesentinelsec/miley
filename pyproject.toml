@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "miley"
-version = "0.1.2"
+version = "0.1.3"
 description = "TBD"
 authors = ["bluesentinelsec <bluesentinel@protonmail.com>"]
 readme = "README.md"
