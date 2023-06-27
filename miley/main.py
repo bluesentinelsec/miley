@@ -5,6 +5,10 @@ import logging
 import os
 
 from miley.client import *
+from miley.container_handler import *
+from miley.dir_walker import *
+from miley.hasher import *
+
 
 
 def main():
@@ -21,12 +25,12 @@ def main():
         hashes_to_scan.append(args.hash)
 
     elif args.path is not None:
-        logging.error("sorry, not implemented yet")
-        return
+        files = walk_dir(args.path)
+        hashes_to_scan = hash_files(files)
 
     elif args.img is not None:
-        logging.error("sorry, not implemented yet")
-        return
+        c = Container()
+        c.get(args.img)
 
     elif args.tar is not None:
         logging.error("sorry, not implemented yet")
@@ -37,7 +41,7 @@ def main():
         return
 
     c = Client()
-    c.query_hashes(hashes=[args.hash])
+    c.query_hashes(hashes=hashes_to_scan)
 
 
 if __name__ == "__main__":

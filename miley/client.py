@@ -1,4 +1,5 @@
 import logging
+import time
 
 import requests
 
@@ -18,20 +19,28 @@ class Client:
         if not self.is_valid_hash(hashes):
             return
 
-        logging.info("querying hashes against malware database")
+        num_hashes_to_scan = len(hashes)
         for each_hash in hashes:
             if each_hash == "":
                 continue
 
+            logging.info(f"querying {self.samples_scanned} / {num_hashes_to_scan} hashes against malware database")
+
             data = {"query": "get_info", "hash": each_hash}
-            response = requests.post(self.url, data=data)
-            j = response.json()
+            try:
+                response = requests.post(self.url, data=data)
+                j = response.json()
+            except Exception as e:
+                logging.error(e)
+                time.sleep(1)
+                continue
+
             self.samples_scanned += 1
 
             self.is_malware_detected(result_in_json=j)
 
         if self.malware_found == False:
-            logging.info(f"scanned {self.samples_scanned} sample(s); no malware was detected")
+            logging.info(f"no malware was detected")
 
         return self.malware_found
 
