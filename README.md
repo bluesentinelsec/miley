@@ -8,6 +8,8 @@ This tool was created to satisfy classwork for Dakota State University's CSC-842
 
 Demo video: [here](https://www.youtube.com/)
 
+![miley_cli](images/miley_cli.png)
+
 ## Prerequisites
 
 - Python 3 interpreter
@@ -58,3 +60,4 @@ Miley was always good at detecting and alerting to potentially dangerous situati
 
 I wrote this tool with her memory at the forefront of my mind.
 
+![miley](images/miley.png)
