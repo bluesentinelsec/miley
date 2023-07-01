@@ -16,6 +16,8 @@ Demo video: [here](https://www.youtube.com/)
 
 ## Usage
 
+**Install Miley**
+
 ```bash
 pip install miley
 
