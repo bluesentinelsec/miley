@@ -8,7 +8,7 @@ This tool was created to satisfy classwork for Dakota State University's CSC-842
 
 Demo video: [here](https://www.youtube.com/)
 
-![miley_cli](images/miley_cli.png)
+<img src="images/miley_cli.png" alt="miley-cli" width="400" height=auto/>
 
 ## Prerequisites
 
