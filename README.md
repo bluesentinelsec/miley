@@ -60,4 +60,5 @@ Miley was always good at detecting and alerting to potentially dangerous situati
 
 I wrote this tool with her memory at the forefront of my mind.
 
-![miley](images/miley.png)
+<img src="images/miley.png" alt="miley" width="400" height=auto/>
+
