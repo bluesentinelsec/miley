@@ -1,6 +1,8 @@
 import logging
 import os
 
+logging.basicConfig(level=logging.INFO)
+
 def walk_dir(path: str):
     logging.info(f"inventorying directory: {path}")
     found_files = []

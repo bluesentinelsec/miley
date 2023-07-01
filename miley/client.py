@@ -1,3 +1,4 @@
+import json
 import logging
 import time
 
@@ -7,6 +8,7 @@ md5_length = 32
 sha1_length = 40
 sha256_length = 64
 
+logging.basicConfig(level=logging.INFO)
 
 class Client:
     def __init__(self):
@@ -50,7 +52,7 @@ class Client:
         if r == "ok":  # query status of 'ok' means malware was detected
             logging.warning("[!] MALWARE DETECTED!")
             self.malware_found = True
-            print(result_in_json)
+            print(json.dumps(result_in_json, indent=2))
             return True
 
         elif r == "hash_not_found":

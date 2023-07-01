@@ -1,6 +1,7 @@
 import hashlib
 import logging
 
+logging.basicConfig(level=logging.INFO)
 
 def hash_file(file):
     content_hash = ""

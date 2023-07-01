@@ -31,6 +31,9 @@ def main():
     elif args.img is not None:
         c = Container()
         c.get(args.img)
+        c.unpack_container_archive()
+        files = walk_dir(c.extracted_path)
+        hashes_to_scan = hash_files(files)
 
     elif args.tar is not None:
         logging.error("sorry, not implemented yet")
@@ -48,15 +51,4 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     main()
 
-"""
-scratch pad:
-Scan local directories / files:
-    ./miley --path /tmp/whatever/
-    ./miley --path /tmp/whatever/evil.exe
 
-Scan containers - should work if the container is in a remote registry or local:
-    ./miley --img alpine:latest
-
-Scan a file hash - meant for testing, but still useful:
-    ./miley --hash SHA256,SHA1,MD5
-"""
