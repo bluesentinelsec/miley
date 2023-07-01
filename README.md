@@ -6,7 +6,7 @@ Miley works by taking file hashes from the container/directory, and querying the
 
 This tool was created to satisfy classwork for Dakota State University's CSC-842 Security Tool Development.
 
-Demo video: [here](coming soon!)
+Demo video: [here](https://www.youtube.com/)
 
 ## Prerequisites
 
