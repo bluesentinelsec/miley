@@ -41,7 +41,7 @@ miley --path /path/to/directory/
 **Scan a remote container image**
 
 ```bash
-miley --image alpine:latest
+miley --img alpine:latest
 ```
 
 ## Future Work
