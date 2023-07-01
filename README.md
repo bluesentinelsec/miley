@@ -1,4 +1,4 @@
-# Miley - a proof of concept malware scanner for containers
+# Miley Malware Scanner
 
 Miley is a proof of concept malware scanner built for scanning container images, as well as local files.
 
