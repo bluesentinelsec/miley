@@ -2,7 +2,7 @@
 
 Miley is a proof of concept malware scanner built for scanning container images, as well as local files.
 
-Miley works by taking file hashes from the container/directory, and querying the hashes against a malware databse, [Malware Bazaar](https://bazaar.abuse.ch/).
+Miley works by taking file hashes from the container/directory, and querying the hashes against a malware database, [Malware Bazaar](https://bazaar.abuse.ch/).
 
 This tool was created to satisfy classwork for Dakota State University's CSC-842 Security Tool Development.
 
